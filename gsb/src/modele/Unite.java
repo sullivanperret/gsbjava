@@ -2,7 +2,7 @@ package modele;
 
 public class Unite {
 	protected String codeUnite;
-	protected String ville;
+	protected String villeeee;
 	
 	
 	public Unite(String codeUnite, String ville) {
