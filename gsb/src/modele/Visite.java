@@ -1,7 +1,7 @@
 package modele;
 
 public class Visite {
-    protected String Referenceeee;
+    protected String Referenceeeeeeeeeeeeeee;
     protected String Date;
     protected String Commentaire;
     protected Medecin unMedecin;
