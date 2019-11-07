@@ -2,7 +2,7 @@ package modele;
 
 public class Stock {
 	
-	protected Visiteur unVisiteur;
+	protected Visiteur unVisiteuur;
 	protected Medicament unMedicament;
 	protected int QteStock;
 	
