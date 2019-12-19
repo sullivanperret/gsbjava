@@ -8,10 +8,7 @@ package tests;
 
 import modele.dao.ConnexionMySql;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 /**
  * @author Isabelle
@@ -27,13 +24,11 @@ public class ConnexionTest {
 	public static void main(String[] args) {
 		// TODO Raccord de méthode auto-généré
 		ResultSet resultat = ConnexionMySql
-				.execReqSelection("select * from LOCALITE");
+				.execReqSelection("select * from localite");
 		try {
 			while (resultat.next()) {
-				System.out.println(resultat.getString(1) + "  "
-						+ resultat.getString(2));
-			}
-			;
+				System.out.println(resultat.getString(1) + "  " + resultat.getString(2));
+			};
 			System.out.println("fin");
 		} catch (Exception e) {
 			System.out.println("Exception");

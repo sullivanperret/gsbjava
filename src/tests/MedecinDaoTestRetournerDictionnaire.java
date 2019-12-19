@@ -9,7 +9,6 @@ package tests;
 import modele.Medecin;
 import modele.dao.MedecinDao;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**

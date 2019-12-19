@@ -21,7 +21,9 @@ import java.sql.Statement;
 public class ConnexionMySql { // DAO = Data Access Object
 	
 	static Connection cnx;
-	
+	   public static void main(String[] args) {
+		   
+	   }
 	public ConnexionMySql(){
 		cnx = null;
 	}
@@ -33,10 +35,11 @@ public class ConnexionMySql { // DAO = Data Access Object
 	 */
 	public static void connecterBd(){
 		//connexion à la base de donnée à partir de jdbc
-		String url = "jdbc:mysql://192.168.60.62:3306/gsb"; // url : chaine de connexion
+		String url = "jdbc:mysql://localhost:3306/javagsb"; // url : chaine de connexion
 		// try permet d'essayer de lancer la connexion
 		try {Class.forName("com.mysql.jdbc.Driver"); 
-			cnx = DriverManager.getConnection(url,"usergsb","password");
+			cnx = DriverManager.getConnection(url,"root","");
+			System.out.println("Connexion réussie ! ");
 		} 
 		// si la connexion echoue un message d'erreur est affiché
         catch(Exception e) {  System.out.println("Echec lors de la connexion");  } 
@@ -86,5 +89,8 @@ public class ConnexionMySql { // DAO = Data Access Object
 		try{cnx.close();}
 		catch(Exception e) {  System.out.println("Erreur sur fermeture connexion");  } 
 	}
-
+	public static void execReqDel(String reqDelete) {
+		// TODO Auto-generated method stub
+		
+	}
 }

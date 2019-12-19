@@ -138,8 +138,7 @@ public class Medecin {
 	 */
 	public void setSpecialite(String specialite) {
 		this.specialite = specialite;
-	}
-	
+	}	
 	
 	
 

@@ -16,6 +16,7 @@ import vue.MenuPrincipal;
  */
 public class Application {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		MenuPrincipal application;
 		application = new MenuPrincipal();// TODO Raccord de méthode auto-généré

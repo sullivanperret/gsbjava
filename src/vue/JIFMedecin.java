@@ -6,16 +6,15 @@
  */
 package vue;
 
-import modele.Medecin;
-
 import java.awt.Container;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
 
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import modele.Medecin;
 
 public class JIFMedecin extends JInternalFrame  {
 	/**

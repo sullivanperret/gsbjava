@@ -1,59 +1,50 @@
 package modele;
 
 public class Visite {
-	protected String Reference;
-	protected String Date;
-	protected String Commentaire;
-	protected Medecin unMedecin;
-	protected Visiteur unVisiteur;
 
-	public Visite(String reference, String date, String commentaire, Medecin unMedecin, Visiteur unVisiteur) {
+	protected String references;
+	protected String date;
+	protected String commentaires;
+	protected String matricule;
+	protected String codeMed;
+	public Visite(String references, String date, String commentaires, String matricule, String codeMed) {
 		super();
-		Reference = reference;
-		Date = date;
-		Commentaire = commentaire;
-		this.unMedecin = unMedecin;
-		this.unVisiteur = unVisiteur;
+		this.references = references;
+		this.date = date;
+		this.commentaires = commentaires;
+		this.matricule = matricule;
+		this.codeMed = codeMed;
 	}
-
-	public String getReference() {
-		return Reference;
+	public String getReferences() {
+		return references;
 	}
-
-	public void setReference(String reference) {
-		Reference = reference;
+	public void setReferences(String references) {
+		this.references = references;
 	}
-
 	public String getDate() {
-		return Date;
+		return date;
 	}
-
 	public void setDate(String date) {
-		Date = date;
+		this.date = date;
+	}
+	public String getCommentaires() {
+		return commentaires;
+	}
+	public void setCommentaires(String commentaires) {
+		this.commentaires = commentaires;
+	}
+	public String getMatricule() {
+		return matricule;
+	}
+	public void setMatricule(String matricule) {
+		this.matricule = matricule;
+	}
+	public String getCodeMed() {
+		return codeMed;
+	}
+	public void setCodeMed(String codeMed) {
+		this.codeMed = codeMed;
 	}
 
-	public String getCommentaire() {
-		return Commentaire;
-	}
-
-	public void setCommentaire(String commentaire) {
-		Commentaire = commentaire;
-	}
-
-	public Medecin getUnMedecin() {
-		return unMedecin;
-	}
-
-	public void setUnMedecin(Medecin unMedecin) {
-		this.unMedecin = unMedecin;
-	}
-
-	public Visiteur getUnVisiteur() {
-		return unVisiteur;
-	}
-
-	public void setUnVisiteur(Visiteur unVisiteur) {
-		this.unVisiteur = unVisiteur;
-	}
 
 }

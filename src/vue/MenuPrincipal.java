@@ -52,8 +52,12 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		contentPane.add(desktopPane, BorderLayout.CENTER);
 
 		setTitle("GSB");
-		setSize(500, 400);
-
+		setSize(505, 400);
+		setLocation(750,300);
+		setResizable(false);
+		setAlwaysOnTop(false);
+		setUndecorated(false);
+		
 		// Ajout d'une barre de menus à la fenêtre
 		mbar = new JMenuBar();
 		mMedecins = new JMenu("Medecins");
@@ -73,8 +77,8 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		mMedicaments.add(mE2);
 
 		mVisites = new JMenu("Visites");
-		JMenuItem mA1 = new JMenuItem("Consultation Visite");
-		mE1.addActionListener(this); // installation d'un écouteur d'action
+		JMenuItem mA1 = new JMenuItem("Recapitulatif Visite");
+		mA1.addActionListener(this); // installation d'un écouteur d'action
 		mVisites.add(mA1);
 		JMenuItem mA2 = new JMenuItem("Ajout Visite");
 		mA2.addActionListener(this);
@@ -88,7 +92,6 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
-	@Override
 	public void actionPerformed(ActionEvent evt) {
 		// TODO Raccord de méthode auto-généré
 		if (evt.getSource() instanceof JMenuItem) {
@@ -100,8 +103,11 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 
 			} else if (ChoixOption.equals("Liste Medecins")) {
 				ouvrirFenetre(new JIFMedecinListeDic(this));
+			} else if (ChoixOption.equals("Recapitulatif Visite")) {
+				ouvrirFenetre(new JIFVisiteRecap());
+			} else if (ChoixOption.equals("Ajout Visite")) {
+				ouvrirFenetre(new JIFVisiteAjout());
 			}
-
 		}
 
 	}
@@ -114,7 +120,7 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		myJInternalFrame.setResizable(true);
 		myJInternalFrame.setMaximizable(true);
 		myJInternalFrame.setClosable(true);
-		myJInternalFrame.setSize(480, 380);
+		myJInternalFrame.setSize(500, 380);
 		desktopPane.add(myJInternalFrame);
 	}
 
